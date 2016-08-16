@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "grpc": "^0.14.1"
+    "grpc": "^0.15.0"
   }
 }

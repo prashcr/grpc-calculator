@@ -11,7 +11,8 @@ function add(numberPair) {
 
 function sub(numberPair) {
   return {
-    value: numberPair.num1.value - numberPair.num2.value
+    value: numberPair.num1.value - numberPair.num2.value,
+    yolo: 'hi'
   }
 }
 
