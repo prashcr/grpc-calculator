@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package calculator;
+
+import "google/api/annotations.proto";
+
+message Number {
+  double value = 1;
+}
+
+message NumberPair {
+  Number num1 = 1;
+  Number num2 = 2;
+}
+
+service Calculator {
+  rpc Add(NumberPair) returns (Number) {
+    option(google.api.http) = {
+      post: "/v1/add"
+      body: "*"
+    };
+  }
+  rpc Sub(NumberPair) returns (Number) {
+    option(google.api.http) = {
+      post: "/v1/sub"
+      body: "*"
+    };
+  }
+  rpc Mult(NumberPair) returns (Number) {
+    option(google.api.http) = {
+      post: "/v1/mult"
+      body: "*"
+    };
+  }
+  rpc Div(NumberPair) returns (Number) {
+    option(google.api.http) = {
+      post: "/v1/div"
+      body: "*"
+    };
+  }
+}
